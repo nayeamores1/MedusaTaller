@@ -1,0 +1,158 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.origen-nav { background: #f8f5ed; border-color: #d9ded2; color: #294937; }
+.origen-wordmark { display: inline-flex; flex-direction: column; align-items: center; color: #294937; font-family: Georgia, serif; font-size: 34px; line-height: .95; letter-spacing: -1.5px; }
+.origen-wordmark span { font-family: Arial, sans-serif; font-size: 9px; line-height: 1; letter-spacing: 4px; margin-top: 8px; margin-left: 4px; }
+.origen-home { background: #f8f5ed; color: #294937; }
+.origen-hero { max-width: 1440px; margin: auto; padding: 58px 6% 64px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 7%; align-items: center; }
+.origen-eyebrow { font-size: 10px; letter-spacing: 2.4px; font-weight: 600; }
+.origen-hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(56px, 6.6vw, 100px); line-height: 1.03; letter-spacing: -4px; margin: 34px 0 26px; }
+.origen-hero h1 em { font-weight: 400; color: #758461; }
+.origen-intro { max-width: 370px; line-height: 1.9; font-size: 15px; color: #606b59; }
+.origen-button { display: inline-flex; align-items: center; gap: 50px; padding: 18px 23px; background: #294937; color: #fffdf5; font-size: 12px; margin-top: 30px; transition: background .2s; }
+.origen-button:hover { background: #456442; }
+.origen-button span, .origen-text-link span { font-size: 21px; line-height: 1; }
+.origen-button:focus-visible, .origen-text-link:focus-visible, .origen-hero-art:focus-visible { outline: 2px solid #ad7b40; outline-offset: 5px; }
+.origen-hero-note { margin-top: 44px; display: flex; align-items: center; gap: 9px; color: #77816d; font-size: 10px; }
+.origen-hero-note > span { display: block; width: 6px; height: 6px; border-radius: 50%; background: #7e946b; }
+.origen-hero-art { display: block; position: relative; background: #e6e9dc; overflow: hidden; }
+.origen-hero-art > img { width: 100%; height: auto; max-height: 575px; object-fit: contain; }
+.origen-art-label { position: absolute; top: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; font-size: 8px; letter-spacing: 1.5px; }
+.origen-art-caption { position: absolute; bottom: 23px; left: 26px; right: 26px; display: flex; align-items: center; justify-content: space-between; font-family: Georgia, serif; font-size: 21px; }
+.origen-art-caption small { display: block; margin-top: 5px; font-family: Arial, sans-serif; font-size: 9px; color: #697a60; }
+.origen-strip { display: flex; justify-content: space-evenly; gap: 20px; padding: 23px; border-top: 1px solid #d9ded2; border-bottom: 1px solid #d9ded2; font-size: 10px; letter-spacing: 1px; color: #617057; }
+.origen-selection { max-width: 1140px; margin: auto; padding: 88px 6%; display: grid; grid-template-columns: 1.1fr .8fr; gap: 14%; align-items: center; }
+.origen-selection h2 { font-family: Georgia, serif; font-size: clamp(34px, 3.5vw, 51px); font-weight: 400; line-height: 1.17; letter-spacing: -1.5px; margin: 24px 0; }
+.origen-selection-copy > p:not(.origen-eyebrow) { max-width: 400px; line-height: 1.9; font-size: 13px; color: #69745f; }
+.origen-text-link { display: inline-flex; gap: 30px; align-items: center; border-bottom: 1px solid #849276; padding: 10px 0; margin-top: 25px; font-size: 11px; }
+.origen-featured { min-width: 0; }
+.origen-featured img { object-fit: cover; }
+.origen-footer { padding: 55px 6% 24px; background: #e9ecdf; color: #294937; }
+.origen-footer-top { display: flex; justify-content: space-between; gap: 30px; max-width: 1260px; margin: auto; }
+.origen-footer-top p { font-size: 11px; color: #6c785f; margin-top: 20px; }
+.origen-footer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 50px; align-content: center; font-size: 12px; }
+.origen-footer nav a:hover { text-decoration: underline; }
+.origen-footer-bottom { max-width: 1260px; margin: 45px auto 0; padding-top: 22px; border-top: 1px solid #cdd5c0; display: flex; justify-content: space-between; gap: 16px; font-size: 9px; color: #69775b; }
+@media (max-width: 767px) {
+  .origen-hero { grid-template-columns: 1fr; padding: 42px 24px 32px; gap: 34px; }
+  .origen-hero h1 { font-size: 64px; letter-spacing: -3px; margin-top: 22px; }
+  .origen-hero-note { margin-top: 26px; }
+  .origen-hero-art > img { max-height: 520px; }
+  .origen-strip { flex-wrap: wrap; gap: 12px 24px; font-size: 9px; text-align: center; }
+  .origen-selection { grid-template-columns: 1fr; gap: 32px; padding: 56px 24px; }
+  .origen-featured { max-width: 360px; width: 100%; margin: 0 auto; }
+  .origen-footer-top { flex-direction: column; gap: 30px; }
+  .origen-footer nav { gap: 16px; }
+  .origen-footer-bottom { flex-wrap: wrap; }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply -translate-y-2 text-xsmall-regular;
+  }
+
+  input:focus ~ label {
+    @apply left-0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: 1px solid #212121;
+    -webkit-text-fill-color: #212121;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  .content-container {
+    @apply max-w-[1440px] w-full mx-auto px-6;
+  }
+
+  .contrast-btn {
+    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+  }
+
+  .text-xsmall-regular {
+    @apply text-[10px] leading-4 font-normal;
+  }
+
+  .text-small-regular {
+    @apply text-xs leading-5 font-normal;
+  }
+
+  .text-small-semi {
+    @apply text-xs leading-5 font-semibold;
+  }
+
+  .text-base-regular {
+    @apply text-sm leading-6 font-normal;
+  }
+
+  .text-base-semi {
+    @apply text-sm leading-6 font-semibold;
+  }
+
+  .text-large-regular {
+    @apply text-base leading-6 font-normal;
+  }
+
+  .text-large-semi {
+    @apply text-base leading-6 font-semibold;
+  }
+
+  .text-xl-regular {
+    @apply text-2xl leading-[36px] font-normal;
+  }
+
+  .text-xl-semi {
+    @apply text-2xl leading-[36px] font-semibold;
+  }
+
+  .text-2xl-regular {
+    @apply text-[30px] leading-[48px] font-normal;
+  }
+
+  .text-2xl-semi {
+    @apply text-[30px] leading-[48px] font-semibold;
+  }
+
+  .text-3xl-regular {
+    @apply text-[32px] leading-[44px] font-normal;
+  }
+
+  .text-3xl-semi {
+    @apply text-[32px] leading-[44px] font-semibold;
+  }
+}

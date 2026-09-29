@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="960" viewBox="0 0 800 960" role="img" aria-label="Ilustración del empaque Café de Loja, Origen Ecuador">
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1"><stop stop-color="#bc9c72"/><stop offset=".48" stop-color="#e4c9a0"/><stop offset="1" stop-color="#c4a67e"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="800" height="960" fill="#e6e9dc"/>
+  <circle cx="400" cy="437" r="282" fill="#d6decb"/>
+  <ellipse cx="404" cy="812" rx="205" ry="30" fill="#344b37" opacity=".18" filter="url(#shadow)"/>
+  <path d="M234 150h332l-7 93 49 506-37 53H229l-37-53 49-506z" fill="url(#paper)"/>
+  <path d="M234 150h332v24H234zM229 778h342v24H229z" fill="#ad895d"/>
+  <path d="M241 243l-28 490 32 42M559 243l29 490-32 42" fill="none" stroke="#ac895f" stroke-width="3" opacity=".5"/>
+  <rect x="244" y="278" width="312" height="422" rx="2" fill="#f7f2e7"/>
+  <g fill="#294937" text-anchor="middle">
+    <text x="400" y="321" font-family="Arial,sans-serif" font-size="13" letter-spacing="4">ORIGEN ECUADOR</text>
+    <path d="M360 370l40-34 40 34M379 367l21-18 21 18" fill="none" stroke="#294937" stroke-width="1.8"/>
+    <text x="400" y="426" font-family="Georgia,serif" font-size="53">Café</text>
+    <text x="400" y="479" font-family="Georgia,serif" font-size="53">de Loja</text>
+    <text x="400" y="518" font-family="Arial,sans-serif" font-size="11" letter-spacing="3">UNA PAUSA CON ORIGEN</text>
+  </g>
+  <path d="M244 618l60-66 44 35 55-51 64 52 42-32 47 48v65H244z" fill="#92a184"/>
+  <path d="M244 643l96-53 74 49 59-42 83 50v53H244z" fill="#526e50"/>
+  <path d="M244 673l74-31 63 31 83-38 92 44v21H244z" fill="#294937"/>
+  <text x="400" y="748" fill="#294937" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">250 g · ECUADOR</text>
+</svg>
